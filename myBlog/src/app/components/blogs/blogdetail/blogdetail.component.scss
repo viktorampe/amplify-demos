@@ -1,0 +1,18 @@
+@import '../../../../constants.scss';
+
+strong {
+    color: $mainColor;
+}
+
+.posts {
+    margin-top: 50px;
+
+
+    .post {
+        background: white;
+        border-left: 3px solid $mainColor;
+        padding: 20px;
+        margin-bottom: 25px;
+        cursor: pointer;
+    }
+}

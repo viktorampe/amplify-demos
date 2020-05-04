@@ -1,0 +1,13 @@
+<div *ngIf="blogs?.length; else noBlogs" >
+    <section class="blogSection">
+        <div class="blog" *ngFor="let blog of blogs" (click)="navigateToDetails(blog)">
+            <h3>{{blog.name}}</h3>
+            <p>Aantal posts: {{blog.posts.items?.length}}</p>
+        </div>
+    </section>
+</div>
+
+<ng-template #noBlogs>
+    <p>Er zijn geen blogs...</p>
+</ng-template>
+<button class="btn" (click)="openCreateBlogDialog()">Create Blog</button>

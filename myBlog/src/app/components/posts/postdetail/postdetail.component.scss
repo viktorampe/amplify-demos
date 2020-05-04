@@ -1,0 +1,17 @@
+@import '../../../../constants.scss';
+
+strong {
+    color: $mainColor;
+}
+
+.comments {
+    margin-top: 50px;
+
+
+    .comment {
+        background: white;
+        padding: 20px;
+        margin-bottom: 25px;
+        width: 500px;
+    }
+}

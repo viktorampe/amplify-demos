@@ -1,0 +1,22 @@
+<h1>{{blog?.name}}</h1>
+<hr>
+<section class="blogDetails">
+    <p> id - <strong>{{blog?.id}}</strong></p>
+    <p> name - <strong>{{blog?.name}}</strong> </p>
+</section>
+
+<section class="posts" *ngIf="blog?.posts?.items?.length; else noPosts">
+    <div class="post_wrapper" *ngFor="let post of blog?.posts?.items">
+        <div class="post" (click)="navigateToPostDetails(post)">
+            <h3>{{post.title}}</h3>
+        </div>
+    </div>
+</section>
+
+<ng-template #noPosts>
+    <p>Er zijn geen posts...</p>
+</ng-template>
+<div class="actions">
+  <button class="btn" (click)="openCreatePostDialog()">Create Post</button>
+  <button class="btn btnWarning" (click)="deleteBlog()">Delete Blog</button>
+</div>

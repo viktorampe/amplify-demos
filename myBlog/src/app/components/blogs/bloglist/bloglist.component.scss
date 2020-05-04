@@ -1,0 +1,27 @@
+@import '../../../../constants.scss';
+
+.blogSection {
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+
+    .blog {
+        background: white;
+        width: 250px;
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 2px solid $mainColor;
+        margin-right: 50px;
+        margin-bottom: 50px;
+        transition: all .3s;
+        cursor: pointer;
+
+        &:hover {
+            box-shadow: 6px 10px 23px -13px rgba(0,0,0,0.75);
+            border-bottom: 4px solid $mainColor;
+        }
+    }
+}

@@ -1,0 +1,14 @@
+<h1>Make a post.</h1>
+<hr>
+<form class="form">
+  <mat-form-field class="full-width">
+    <mat-label>Whats the title of your Post?</mat-label>
+    <input
+    matInput
+    [(ngModel)]= "postTitle"
+    name="posttitle"
+    >
+  </mat-form-field>
+  <button class="btn" (click)="createPost()">create</button>
+</form>
+

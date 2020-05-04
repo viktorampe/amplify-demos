@@ -1,0 +1,42 @@
+
+
+<div class="content" role="main">
+
+
+  <div class="createSection">
+    <button (click)="createTodo()">Add Todo</button>
+    <div class="formGroup">
+      <input
+        [(ngModel)]="name"
+        #todoName="ngModel"
+        id="todoName"
+        name="todoName"
+        type="text"
+        required
+        minlength="3"
+        placeholder="name"
+      >
+    </div>
+  
+    <div class="formGroup">
+      <input
+        [(ngModel)]="description"
+        #todoDescription="ngModel" 
+        id="todoDescription"
+        name="todoDescription"
+        type="text"
+        required
+        minlength="3"
+        placeholder="description"
+      >
+    </div>
+  </div>
+
+  <ul>
+    <li *ngFor="let item of todos">{{item.name}} - {{item.description}}</li>
+  </ul>
+
+
+</div>
+
+<router-outlet></router-outlet>

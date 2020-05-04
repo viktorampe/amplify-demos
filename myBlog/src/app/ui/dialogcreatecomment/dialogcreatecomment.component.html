@@ -1,0 +1,13 @@
+<form class="form">
+  <mat-form-field class="full-width">
+    <mat-label>Whats the name of your blog?</mat-label>
+    <textarea
+      matInput
+      [(ngModel)]= "content"
+      name="content"
+      rows="10"
+    ></textarea>
+  </mat-form-field>
+  <button class="btn" (click)="createComment()">create</button>
+</form>
+

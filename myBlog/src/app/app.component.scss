@@ -1,0 +1,30 @@
+@import '../constants.scss';
+
+nav {
+    background-color: $mainColor;
+    height: 70px;
+    align-items: center;
+    display: flex;
+
+    .navigation_wrapper {
+        display: flex;
+        justify-content: flex-start;
+        align-items: baseline;
+    
+        .nav_item {
+    
+            a {
+                color: white;
+                font-size: 16px;
+                text-transform: uppercase;
+                font-weight: 900;
+                margin-right: 50px;
+                text-decoration: none; 
+            }
+        }
+    }
+}
+
+.content {
+    margin-top: 70px;
+}

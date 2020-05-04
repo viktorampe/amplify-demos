@@ -1,0 +1,23 @@
+<h1>{{post?.title}}</h1>
+<hr>
+<section class="postDetails">
+  <p> id - <strong>{{post?.id}}</strong></p>
+  <p> name - <strong>{{post?.title}}</strong> </p>
+  <p> this was posted on blog - <strong>{{post?.blog?.name}}</strong></p>
+</section>
+
+<section class="comments" *ngIf="post?.comments?.items?.length; else noComments">
+  <div class="comment_wrapper" *ngFor="let comment of post?.comments?.items">
+      <div class="comment">
+          <p>{{comment.content}}</p>
+      </div>
+  </div>
+</section>
+
+<ng-template #noComments>
+  <p>Er zijn geen comments...</p>
+</ng-template>
+<div class="actions">
+  <button class="btn" (click)="openCreateBlogDialog()">Create Comment</button>
+  <button class="btn btnWarning" (click)="deletePost()">Delete post</button>
+</div>
