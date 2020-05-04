@@ -1,0 +1,61 @@
+
+<div class="login" *ngIf="!newPasswordRequired; else setNewPassword">
+  <h1>Login</h1>
+  <form class="form">
+    <mat-form-field class="form_field">
+      <mat-label>Username</mat-label>
+      <input
+        [(ngModel)]="username"
+        name="username"
+        matInput
+        type="text"
+        placeholder="Username">
+    </mat-form-field>
+    <mat-form-field class="form_field">
+      <mat-label>Password</mat-label>
+      <input
+        [(ngModel)]="password"
+        name="password"
+        matInput
+        type="password"
+        placeholder="Password">
+    </mat-form-field>
+
+    <div class="actions">
+      <button mat-raised-button color="primary"(click)="signIn()" >Login</button>
+      <button mat-raised-button color="primary"(click)="signUp()" >Sign up</button>
+    </div>
+  </form>
+
+
+</div>
+
+<div class="message">
+  <p class="message_content">{{message}}</p>
+</div>
+
+<ng-template #setNewPassword>
+  <h1>Set a new password</h1>
+  <form class="form">
+    <mat-form-field class="form_field">
+      <mat-label>New Password</mat-label>
+      <input
+        [(ngModel)]="newPassword"
+        name="newPassword"
+        matInput
+        type="password"
+        placeholder="new password">
+    </mat-form-field>
+    <mat-form-field class="form_field">
+      <mat-label>Repeat new password</mat-label>
+      <input
+        [(ngModel)]="newPasswordRepeat"
+        name="newPasswordRepeat"
+        matInput
+        type="password"
+        placeholder="Reapeat new password">
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click)="completeNewPassword()" >Set new password</button>
+  </form>
+</ng-template>
+

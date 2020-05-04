@@ -1,0 +1,19 @@
+<div *ngIf="loggedInUser">
+  <h1>{{loggedInUser.username}}</h1>
+  <hr>
+  <h2>Pool</h2>
+  <p>userPoolId: {{loggedInUser.pool.userPoolId}}</p>
+  <p>clientId: {{loggedInUser.pool.clientId}}</p>
+  <p>client: {{loggedInUser.pool.client.endpoint}}</p>
+  <hr>
+  <h2>Attributes</h2>
+  <p>sub: {{loggedInUser.attributes.sub}} </p>
+  <p>email_verified: {{loggedInUser.attributes.email_verified}} </p>
+  <p>phone_number_verified: {{loggedInUser.attributes.phone_number_verified}} </p>
+  <p>phone number: {{loggedInUser.attributes.phone_number}} </p>
+  <p>email: {{loggedInUser.attributes.email}} </p>
+</div>
+<hr>
+<div class="actions">
+  <button mat-raised-button color="primary"(click)="logout()" >Log out</button>
+</div>

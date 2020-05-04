@@ -1,0 +1,72 @@
+<div class="register">
+  <h1>Register</h1>
+  <ng-container *ngIf="!setConfirmationCode; else confirmationCodeForm">
+    <form class="form">
+      <mat-form-field class="form_field">
+        <mat-label>Username</mat-label>
+        <input
+          [(ngModel)]="username"
+          name="username"
+          matInput
+          type="text"
+          placeholder="Username">
+      </mat-form-field>
+
+      <mat-form-field class="form_field">
+        <mat-label>Password</mat-label>
+        <input
+          [(ngModel)]="password"
+          name="password"
+          matInput
+          type="password"
+          placeholder="Password">
+      </mat-form-field>
+
+      <mat-form-field class="form_field">
+        <mat-label>Email</mat-label>
+        <input
+          [(ngModel)]="email"
+          name="email"
+          matInput
+          type="email"
+          placeholder="Email address">
+      </mat-form-field>
+
+      <mat-form-field class="form_field">
+        <mat-label>Phone number</mat-label>
+        <input
+          [(ngModel)]="phone_number"
+          name="phonenumber"
+          matInput
+          type="text"
+          placeholder="Start with +32">
+      </mat-form-field>
+
+      <p>{{ message }}</p>
+
+      <div class="actions">
+        <button mat-raised-button color="primary"(click)="signUp()" >Sign up</button>
+      </div>
+    </form>
+  </ng-container>
+
+  <ng-template #confirmationCodeForm>
+    <form class="form">
+
+      <mat-form-field class="form_field">
+        <mat-label>Confirmation code</mat-label>
+        <input
+          [(ngModel)]="confirmationCode"
+          name="confirmationCode"
+          matInput
+          type="text"
+          placeholder="confirmation code">
+      </mat-form-field>
+
+      <p>{{ message }}</p>
+
+      <div class="actions">
+        <button mat-raised-button color="primary"(click)="confirmUser()" >Confirm</button>
+      </div>
+    </form>
+  </ng-template>
