@@ -3,6 +3,7 @@ Original turorial: https://aws-amplify.github.io/docs/js/start?platform=angular
 # 1 - Amazon Webservicess Account aanmaken
 
 Maak een account aan op https://aws.amazon.com/
+* Installeer aws-amplify core `npm i aws-amplify --save`
 
 # 2 - Webapp aanmaken
 
