@@ -304,12 +304,10 @@ Objecten kunnen verwijdert worden ookal zijn er nog FK's naar dat object (bv Een
 1. Update `main.ts`
 
 ```
-import PubSub from '@aws-amplify/pubsub';
-import API from '@aws-amplify/api';
+import Amplify from 'aws-amplify';
 import awsconfig from './aws-exports';
 
-API.configure(awsconfig);
-PubSub.configure(awsconfig);
+Amplify.configure(awsconfig);
 ```
 
 Manuele configuratie kan:
