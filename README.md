@@ -549,7 +549,7 @@ type Todo @model {
 }
 ```
 
-* Save: `amplify api gql-compile`  daarna: `amplify push`
+* Save: `amplify api gql-compile`  daarna: `amplify push`. Indien de API.service zichzelf niet update, voer dan `amplify codegen` uit.
 
 ## API.service.ts bijwerken
 
